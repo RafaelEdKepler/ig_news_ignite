@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { stripe } from '../services/stripe';
-import { SubscribeButton } from '../src/components/SubscribeButton';
+import { SubscribeButton } from '../components/SubscribeButton';
 
 import styles from './home.module.scss';
 
@@ -49,11 +49,11 @@ export const getStaticProps: GetStaticProps = async() => {
       currency: 'USD'
     }).format(price.unit_amount / 100),
   };
-  
+
   return {
     props: {
       product: product
-    }, 
+    },
     revalidate: 60 * 60 * 24 // 24 hours,
   };
 }
