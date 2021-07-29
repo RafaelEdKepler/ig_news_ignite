@@ -14,9 +14,6 @@ export default NextAuth({
         }),
         // ...add more providers here
     ],
-    jwt: {
-        signingKey: process.env.SIGNIN_KEY
-    },
     callbacks: {
         async signIn(user, account, profile) {
             console.log(user);
