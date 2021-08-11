@@ -47,7 +47,7 @@ export default NextAuth({
             } catch (err) {
                 return {
                     ...session,
-                    activeSubscription: null
+                    activeSubscription: true
                 }
             }
         },
