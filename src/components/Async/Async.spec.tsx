@@ -7,7 +7,9 @@ test('it renders correctly', async () => {
     expect(screen.getByText('Hello World')).toBeInTheDocument();
     //expect(await screen.findByText('Button')).toBeInTheDocument(); // Espera algo aparecer em tela, como timeout maximo de 1 segundo
 
-    await waitForElementToBeRemoved(screen.queryByText('Button')); // Verifica se o elemento nao esta na tela
+    // screen.logTestingPlaygroundURL // Cria uma url que leva a um playground onde podemos ver em detalhes o que esta sendo montado na tela
+
+    //await waitForElementToBeRemoved(screen.queryByText('Button')); // Verifica se o elemento nao esta na tela
 
     await waitFor(() => {
         return expect(screen.getByText('Hello World')).toBeInTheDocument();
